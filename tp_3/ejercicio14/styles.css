@@ -1,0 +1,88 @@
+/* Variables (tema claro por defecto) */
+:root {
+  --color-primario: #0077cc;
+  --color-primario-hover: #005fa3;
+  --color-primario-active: #004a80;
+  --color-fondo: #ffffff;
+  --color-fondo-input: #ffffff;
+  --color-texto: #222222;
+  --color-borde: #cccccc;
+  --espaciado: 10px;
+  --radio: 6px;
+  --fuente: Arial, sans-serif;
+  --transicion: 0.3s;
+}
+
+/* Tema oscuro: solo se redefinen las variables que cambian */
+body.modo-oscuro {
+  --color-fondo: #1e1e1e;
+  --color-fondo-input: #2b2b2b;
+  --color-texto: #f0f0f0;
+  --color-borde: #555555;
+}
+
+/* Estilos generales */
+body {
+  font-family: var(--fuente);
+  margin: calc(var(--espaciado) * 2);
+  background-color: var(--color-fondo);
+  color: var(--color-texto);
+  transition: background-color var(--transicion), color var(--transicion);
+}
+
+form {
+  max-width: 400px;
+}
+
+label {
+  display: block;
+  margin-bottom: calc(var(--espaciado) / 2);
+  font-weight: bold;
+}
+
+/* Inputs y textarea */
+input,
+textarea {
+  width: 100%;
+  padding: var(--espaciado);
+  background-color: var(--color-fondo-input);
+  color: var(--color-texto);
+  border: 1px solid var(--color-borde);
+  border-radius: var(--radio);
+  box-sizing: border-box;
+  font-family: inherit;
+  font-size: 16px;
+  transition: border-color var(--transicion), box-shadow var(--transicion);
+}
+
+textarea {
+  resize: vertical;
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+  border-color: var(--color-primario);
+  box-shadow: 0 0 6px var(--color-primario);
+}
+
+/* Botón */
+button {
+  padding: var(--espaciado) calc(var(--espaciado) * 2);
+  background-color: var(--color-primario);
+  color: #fff;
+  border: none;
+  border-radius: var(--radio);
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color var(--transicion), transform 0.1s;
+}
+
+button:hover {
+  background-color: var(--color-primario-hover);
+}
+
+button:active {
+  background-color: var(--color-primario-active);
+  transform: scale(0.97);
+}

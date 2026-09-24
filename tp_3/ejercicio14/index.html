@@ -1,0 +1,52 @@
+<!-- Ejercicio 14 — Variables CSS y temas
+Definir variables CSS (--color-primario, --color-secundario, --espaciado, etc.) en :root y aplicarlas en al menos 5 propiedades distintas del sitio.
+Requisitos: Uso de var(), cambio de al menos una variable para simular un "modo oscuro" simple.
+Evaluación: Correcta reutilización de variables y organización del código. -->
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulario de Contacto</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<!-- <body class=""> -->
+<body class="modo-oscuro">
+
+  <h1>Contacto</h1>
+
+  <form action="" method="POST">
+
+    <!-- Nombre -->
+    <div>
+      <label for="nombre">Nombre completo:</label>
+      <input type="text" id="nombre" name="nombre" required>
+    </div>
+    <br>
+
+    <!-- Email -->
+    <div>
+      <label for="email">Correo electrónico:</label>
+      <input type="email" id="email" name="email" required>
+    </div>
+    <br>
+
+    <!-- Mensaje -->
+    <div>
+      <label for="mensaje">Mensaje:</label>
+      <textarea id="mensaje" name="mensaje" rows="5" cols="30" required></textarea>
+    </div>
+    <br>
+
+    <!-- Botón de envío -->
+    <button type="submit">Enviar mensaje</button>
+
+  </form>
+
+</body>
+
+</html>

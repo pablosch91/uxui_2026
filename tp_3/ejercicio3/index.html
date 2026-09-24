@@ -1,0 +1,95 @@
+<!-- Ejercicio 3 — Tabla de datos
+Construir una tabla con encabezados (<thead>), cuerpo (<tbody>) y pie (<tfoot>) que muestre un horario semanal de clases.
+Requisitos: <table>, <tr>, <th>, <td>, uso de colspan/rowspan en al menos una celda.
+Evaluación: Estructura semántica de la tabla. -->
+
+<!-- colspan y rowspan van dentro de th o td y son atributos que nos permiten abarcar más columnas o más filas -->
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Horario - Lic. en Sistemas</title>
+</head>
+
+<body>
+
+  <h1>Horario semanal de clases</h1>
+
+  <table border="1">
+    <!-- Encabezados -->
+    <thead>
+      <tr>
+        <th>Horario</th>
+        <th>Lunes</th>
+        <th>Martes</th>
+        <th>Miércoles</th>
+        <th>Jueves</th>
+        <th>Viernes</th>
+      </tr>
+    </thead>
+
+    <!-- Cuerpo de la tabla -->
+    <tbody>
+      <tr>
+        <td>17:30 - 18:15</td>
+        <td>---</td>
+        <td>---</td>
+        <!-- Ingeniería de Software (17:30 a 19:00) -->
+        <td rowspan="2">Ingeniería de Software</td>
+        <td>---</td>
+        <td>---</td>
+      </tr>
+      <tr>
+        <td>18:15 - 19:00</td>
+        <!-- Algoritmos y Estructuras de Datos (18:15 a 20:30) -->
+        <td rowspan="3">Algoritmos y Estructuras de Datos</td>
+        <td>---</td>
+        <td>---</td>
+        <td>---</td>
+      </tr>
+      <tr>
+        <td>19:00 - 19:45</td>
+        <td>---</td>
+        <td>---</td>
+        <!-- Arquitectura de Computadoras el jueves (19:00 a 20:30) -->
+        <td rowspan="2">Arquitectura de Computadoras</td>
+        <!-- POO el viernes (19:00 a 20:30) -->
+        <td rowspan="2">Programación Orientada a Objetos</td>
+      </tr>
+      <tr>
+        <td>19:45 - 20:30</td>
+        <td>---</td>
+        <!-- POO el miércoles (19:45 a 23:00) abarca 3 filas -->
+        <td rowspan="3">Programación Orientada a Objetos</td>
+      </tr>
+      <tr>
+        <td>20:30 - 20:40</td>
+        <td align="center"><strong>RECREO</strong></td>
+        <td>---</td>
+        <td>---</td>
+        <td align="center"><strong>RECREO</strong></td>
+      </tr>
+      <tr>
+        <td>20:40 - 23:00</td>
+        <td>Diseño UX/UI</td>
+        <td>Ingeniería de Software</td>
+        <td>---</td>
+        <td>Arquitectura de Computadoras</td>
+      </tr>
+    </tbody>
+
+    <!-- Pie de la tabla -->
+    <tfoot>
+      <tr>
+        <td colspan="6">Horario correspondiente al segundo año de Lic. en Sistemas de Información</td>
+      </tr>
+    </tfoot>
+  </table>
+
+</body>
+
+</html>

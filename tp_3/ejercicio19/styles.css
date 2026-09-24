@@ -1,0 +1,149 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+}
+
+.registro {
+  max-width: 400px;
+}
+
+/* Radios ocultos (sin display:none, para no perder accesibilidad) */
+.paso-radio {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* ===== Indicador de progreso ===== */
+.indicador {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.indicador span {
+  flex: 1;
+  padding: 8px;
+  text-align: center;
+  font-size: 14px;
+  background-color: #eee;
+  color: #666;
+  border-radius: 6px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+#paso1:checked~.indicador .ind-1,
+#paso2:checked~.indicador .ind-2 {
+  background-color: #0077cc;
+  color: #fff;
+}
+
+/* ===== Pasos: uno oculto, uno visible ===== */
+.paso {
+  display: none;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 15px;
+}
+
+#paso1:checked~.paso-1,
+#paso2:checked~.paso-2 {
+  display: block;
+  animation: aparecer 0.4s ease-out;
+}
+
+/* display no se puede animar, así que la transición entre pasos es un fade-in */
+@keyframes aparecer {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ===== Campos ===== */
+label {
+  display: block;
+  margin: 12px 0 5px;
+  font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  border: 2px solid #ccc;
+  border-radius: 6px;
+  font-size: 16px;
+  transition: border-color 0.3s;
+}
+
+/* :required -> borde izquierdo más grueso en los campos obligatorios */
+input:required {
+  border-left-width: 6px;
+}
+
+/* :invalid -> rojo, pero solo cuando el usuario ya escribió algo */
+input:not(:placeholder-shown):invalid {
+  border-color: #d93025;
+}
+
+/* :valid -> verde */
+input:valid {
+  border-color: #1e8e3e;
+}
+
+/* Mensajes de error: ocultos hasta que el campo es inválido */
+.error {
+  display: none;
+  margin-top: 4px;
+  font-size: 13px;
+  color: #d93025;
+}
+
+input:not(:placeholder-shown):invalid+.error {
+  display: block;
+}
+
+/* ===== Botones ===== */
+.btn {
+  display: inline-block;
+  margin-top: 20px;
+  margin-right: 8px;
+  padding: 10px 20px;
+  background-color: #0077cc;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: normal;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.btn:hover {
+  background-color: #005fa3;
+}
+
+.btn-atras {
+  background-color: #777;
+}
+
+.btn-atras:hover {
+  background-color: #555;
+}
+
+/* "Siguiente" desactivado mientras el paso 1 tenga campos inválidos */
+.registro:has(#nombre:invalid, #email:invalid) .btn-siguiente {
+  opacity: 0.4;
+  pointer-events: none;
+}

@@ -1,0 +1,63 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+}
+
+form {
+  max-width: 400px;
+}
+
+/* Labels sobre cada campo */
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+/* Inputs y textarea: bordes redondeados y transición */
+input,
+textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  box-sizing: border-box;
+  font-family: inherit;
+  font-size: 16px;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+textarea {
+  resize: vertical;
+}
+
+/* Estado :focus diferenciado */
+input:focus,
+textarea:focus {
+  outline: none;
+  border-color: #0077cc;
+  box-shadow: 0 0 6px rgba(0, 119, 204, 0.5);
+}
+
+/* Botón */
+button {
+  padding: 10px 20px;
+  background-color: #0077cc;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.1s;
+}
+
+/* Estado :hover */
+button:hover {
+  background-color: #005fa3;
+}
+
+/* Estado :active (mientras se hace clic) */
+button:active {
+  background-color: #004a80;
+  transform: scale(0.97);
+}

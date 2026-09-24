@@ -1,0 +1,42 @@
+<!-- Ejercicio 17 — Menú responsivo tipo "hamburguesa" (solo CSS)
+Implementar un menú de navegación que se colapse en pantallas chicas y se despliegue al hacer clic en un ícono, usando el truco del checkbox oculto (:checked) — sin JavaScript.
+Requisitos: input[type="checkbox"] oculto, selector ~ o +, transición de apertura/cierre.
+Evaluación: Funcionamiento sin JS y accesibilidad básica (label asociado al checkbox). -->
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ejercicio 17 - Menú hamburguesa</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+  <header class="barra">
+    <a href="#" class="logo">Mi Sitio</a>
+
+    <!-- El checkbox tiene que ir ANTES del label y del nav para que ~ funcione -->
+    <input type="checkbox" id="menu-toggle" class="menu-toggle">
+    <label for="menu-toggle" class="hamburguesa" aria-label="Abrir o cerrar menú">☰</label>
+
+    <nav class="menu">
+      <ul>
+        <li><a href="#">Inicio</a></li>
+        <li><a href="#">Productos</a></li>
+        <li><a href="#">Servicios</a></li>
+        <li><a href="#">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Contenido de la página</h1>
+    <p>Achicá la ventana por debajo de 768px y hacé clic en el ícono ☰ para desplegar el menú.</p>
+  </main>
+
+</body>
+
+</html>

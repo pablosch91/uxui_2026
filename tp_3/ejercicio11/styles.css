@@ -1,0 +1,47 @@
+/* Lista base */
+.menu {
+  list-style: none;
+  padding: 0;
+  margin: 20px;
+  max-width: 300px;
+}
+
+.menu li {
+  border-bottom: 1px solid #ddd;
+}
+
+/* Enlaces */
+.menu a {
+  display: block;
+  padding: 12px 15px;
+  text-decoration: none;
+  color: #333;
+}
+
+/* Pseudo-elemento: ícono decorativo antes de cada enlace */
+.menu a::before {
+  content: "➜";
+  margin-right: 10px;
+  color: #0077cc;
+}
+
+/* Pseudo-clase: filas alternadas (pares) */
+.menu li:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+/* Pseudo-clase: quitar el borde del último elemento */
+.menu li:last-child {
+  border-bottom: none;
+}
+
+/* Pseudo-clase: efecto al pasar el mouse */
+.menu a:hover {
+  background-color: #0077cc;
+  color: #fff;
+}
+
+/* El ícono también cambia de color en hover */
+.menu a:hover::before {
+  color: #fff;
+}

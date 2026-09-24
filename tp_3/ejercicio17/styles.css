@@ -1,0 +1,107 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+main {
+  padding: 20px;
+}
+
+/* Barra de navegación (mobile first) */
+.barra {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  background-color: #2c3e50;
+}
+
+.logo {
+  color: #fff;
+  font-size: 20px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+/* Checkbox oculto visualmente (NO display: none, así sigue accesible con teclado) */
+.menu-toggle {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* Ícono hamburguesa: es el label asociado al checkbox */
+.hamburguesa {
+  color: #fff;
+  font-size: 28px;
+  cursor: pointer;
+  user-select: none;
+}
+
+/* Muestra el foco cuando se navega con Tab */
+.menu-toggle:focus-visible~.hamburguesa {
+  outline: 2px solid #fff;
+  outline-offset: 4px;
+}
+
+/* Menú: cerrado por defecto (altura 0) con transición */
+.menu {
+  width: 100%;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease;
+}
+
+.menu ul {
+  list-style: none;
+}
+
+.menu a {
+  display: block;
+  padding: 12px 0;
+  color: #fff;
+  text-decoration: none;
+  border-top: 1px solid #3d566e;
+}
+
+.menu a:hover {
+  background-color: #34495e;
+}
+
+/* Cuando el checkbox está marcado, se abre el menú */
+.menu-toggle:checked~.menu {
+  max-height: 300px;
+}
+
+/* Escritorio: 768px o más */
+@media (min-width: 768px) {
+
+  /* El ícono ya no hace falta */
+  .hamburguesa {
+    display: none;
+  }
+
+  /* El menú siempre visible, en una fila */
+  .menu {
+    width: auto;
+    max-height: none;
+    overflow: visible;
+  }
+
+  .menu ul {
+    display: flex;
+    gap: 10px;
+  }
+
+  .menu a {
+    padding: 8px 12px;
+    border-top: none;
+    border-radius: 6px;
+  }
+}

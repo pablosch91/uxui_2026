@@ -1,0 +1,26 @@
+/* Selector universal */
+* {
+  box-sizing: border-box;
+}
+
+/* Selector de etiqueta */
+body {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+}
+
+/* Selectores de clase */
+/* Sin display: flex, los <div> aparecen uno debajo del otro: */
+.contenedor {
+  display: flex;
+}
+
+.card {
+  width: 200px;
+  height: 150px;
+
+  margin: 10px;
+  padding: 20px;
+
+  border: 2px solid #333;
+}

@@ -1,0 +1,53 @@
+<!-- Ejercicio 4 — Formulario simple
+Crear un formulario de contacto con campos: nombre, email, mensaje y botón de envío.
+Requisitos: <form>, <label> asociado a cada <input>, atributo required, <textarea>.
+Evaluación: Accesibilidad (labels correctamente vinculados) y validación nativa HTML5. -->
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulario de Contacto</title>
+</head>
+
+<body>
+
+  <h1>Contacto</h1>
+
+  <form action="" method="POST"> <!-- Etiqueta para construir el formulario, método POST envía la información -->
+
+    <!-- Para cada campo vamos a utilizar una etiqueta que se llama label -->
+
+    <!-- Nombre -->
+    <div>
+      <label for="nombre">Nombre completo:</label>
+      <input type="text" id="nombre" name="nombre" required>
+    </div>
+    <br>
+
+    <!-- Email -->
+    <div>
+      <label for="email">Correo electrónico:</label>
+      <input type="email" id="email" name="email" required>
+    </div>
+    <br>
+
+    <!-- Mensaje -->
+    <div>
+      <label for="mensaje">Mensaje:</label>
+      <textarea id="mensaje" name="mensaje" rows="5" cols="30" required
+        ></textarea>
+    </div>
+    <br>
+
+    <!-- Botón de Envío -->
+    <button type="submit">Enviar mensaje</button>
+
+  </form>
+
+</body>
+
+</html>

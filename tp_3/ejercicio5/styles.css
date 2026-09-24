@@ -1,0 +1,10 @@
+/* Selector de etiqueta o tipo: Se utiliza para seleccionar una etiqueta específica. */
+h1 {
+  color: blue;
+  font-size: 24 px;
+}
+
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  background: #6495ED;
+}

@@ -1,0 +1,58 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+}
+
+/* Spinner */
+
+/* Definición de la animación: rota de 0 a 360 grados */
+@keyframes girar {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.spinner {
+  width: 50px;
+  height: 50px;
+  border: 6px solid #ddd;
+  border-top-color: #0077cc; /* el lado de color es el que "gira" */
+  border-radius: 50%;
+
+  animation-name: girar;
+  animation-duration: 1s; /* cuánto dura cada vuelta */
+  animation-timing-function: linear; /* velocidad constante, ideal para un spinner */
+  animation-iteration-count: infinite; /* se repite para siempre */
+}
+
+/* Tarjeta: fade-in + slide-up */
+
+/* Empieza transparente y 30px más abajo, termina visible en su lugar */
+@keyframes aparecer {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.tarjeta {
+  max-width: 300px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #fff;
+
+  animation-name: aparecer;
+  animation-duration: 0.8s;
+  animation-timing-function: ease-out; /* arranca rápido y frena suave */
+  animation-iteration-count: 1; /* se ejecuta una sola vez */
+}

@@ -1,0 +1,18 @@
+/* Selector de clase */
+.importante {
+  font-weight: bold;
+  background-color: #fff3cd;
+}
+
+/* Selector descendiente */
+.card p {
+  color: #444;
+  border-left: 4px solid #007bff;
+  padding-left: 10px;
+}
+
+/* Selector de ID */
+#especial {
+  color: #6f42c1;
+  font-style: italic;
+}

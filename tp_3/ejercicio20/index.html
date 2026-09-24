@@ -1,0 +1,117 @@
+<!-- Ejercicio 20 — Proyecto integrador: Landing Page completa
+Maquetar una landing page completa de una sola página que incluya: navbar fija con scroll suave (scroll-behavior: smooth), sección hero con imagen de fondo, sección de servicios/productos en grid, sección de testimonios en carrusel simple (con scroll-snap), formulario de contacto y footer.
+Requisitos: Integrar Flexbox y Grid combinados, variables CSS, al menos 2 media queries, una animación y buenas prácticas de HTML semántico (<header>, <main>, <section>, <footer>).
+Evaluación: Integración de todos los conceptos del TP, responsividad completa, calidad y organización del código (CSS separado en secciones comentadas). -->
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>UADER - Facultad de Ciencia y Tecnología</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+  <header class="navbar">
+    <a href="#inicio" class="marca">
+      <img src="logo.png" alt="Logo UADER">
+      <span>UADER · FCyT</span>
+    </a>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#carreras">Carreras</a></li>
+        <li><a href="#opiniones">Opiniones</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- HERO -->
+    <section id="inicio" class="hero">
+      <div class="hero-contenido">
+        <h1>Facultad de Ciencia y Tecnología</h1>
+        <p>Universidad Autónoma de Entre Ríos</p>
+      </div>
+    </section>
+
+    <!-- CARRERAS -->
+    <section id="carreras" class="seccion">
+      <h2>Nuestras carreras</h2>
+      <div class="carreras-grid">
+        <article class="tarjeta">
+          <h3>Carrera 1</h3>
+          <p>Descripción de la carrera.</p>
+        </article>
+        <article class="tarjeta">
+          <h3>Carrera 2</h3>
+          <p>Descripción de la carrera.</p>
+        </article>
+        <article class="tarjeta">
+          <h3>Carrera 3</h3>
+          <p>Descripción de la carrera.</p>
+        </article>
+        <article class="tarjeta">
+          <h3>Carrera 4</h3>
+          <p>Descripción de la carrera.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- OPINIONES (carrusel) -->
+    <section id="opiniones" class="seccion seccion-gris">
+      <h2>Opiniones</h2>
+      <div class="carrusel">
+        <blockquote class="testimonio">
+          <p>"Texto de ejemplo de un estudiante."</p>
+          <footer>— Estudiante 1</footer>
+        </blockquote>
+        <blockquote class="testimonio">
+          <p>"Texto de ejemplo de un estudiante."</p>
+          <footer>— Estudiante 2</footer>
+        </blockquote>
+        <blockquote class="testimonio">
+          <p>"Texto de ejemplo de un graduado."</p>
+          <footer>— Graduado 1</footer>
+        </blockquote>
+        <blockquote class="testimonio">
+          <p>"Texto de ejemplo de un graduado."</p>
+          <footer>— Graduado 2</footer>
+        </blockquote>
+      </div>
+    </section>
+
+    <!-- CONTACTO -->
+    <section id="contacto" class="seccion">
+      <h2>Contacto</h2>
+      <form class="formulario" action="" method="POST">
+        <label for="nombre">Nombre</label>
+        <input type="text" id="nombre" name="nombre" required>
+
+        <label for="email">Correo electrónico</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="mensaje">Mensaje</label>
+        <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
+
+        <button type="submit">Enviar</button>
+      </form>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <p>© 2026 UADER - Facultad de Ciencia y Tecnología</p>
+    <p>Diseño UX/UI</p>
+  </footer>
+
+</body>
+
+</html>
