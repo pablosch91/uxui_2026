@@ -1,0 +1,132 @@
+.header {
+  position: absolute;
+  inset: var(--space-6) 0 auto;
+  z-index: 5;
+  color: var(--color-white);
+}
+
+.header__inner {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+}
+
+.header__logo {
+  margin-right: auto;
+  font: 700 var(--fs-logo)/1 var(--font-display);
+  text-transform: lowercase;
+}
+
+.header__search {
+  display: grid;
+  place-items: center;
+  width: var(--tap);
+  height: var(--tap);
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background: var(--color-white);
+  transition: transform var(--ease);
+}
+
+.header__search img {
+  width: 70%;
+  height: 70%;
+}
+
+.header :focus-visible {
+  outline-color: var(--color-white);
+}
+
+.nav__list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.nav__link {
+  display: flex;
+  align-items: center;
+  min-height: var(--tap);
+  padding-inline: var(--space-4);
+  font: 500 var(--fs-md)/1 var(--font-ui);
+  text-transform: uppercase;
+}
+
+.nav__link--login {
+  font-weight: 600;
+}
+
+.menu {
+  position: relative;
+}
+
+.menu__toggle {
+  display: block;
+  width: var(--tap);
+  height: var(--tap);
+  list-style: none;
+  cursor: pointer;
+  border: 2px solid var(--color-white);
+  border-radius: 50%;
+  background: linear-gradient(var(--color-white) 0 0) center 35% / 50% 2px no-repeat,
+    linear-gradient(var(--color-white) 0 0) center 50% / 50% 2px no-repeat,
+    linear-gradient(var(--color-white) 0 0) center 65% / 50% 2px no-repeat;
+}
+
+.menu__toggle::-webkit-details-marker {
+  display: none;
+}
+
+.menu__panel {
+  position: absolute;
+  right: 0;
+  top: calc(100% + var(--space-2));
+  min-width: 12rem;
+  padding: var(--space-2);
+  background: var(--color-espresso);
+  border-radius: var(--radius-card);
+}
+
+.nav--desktop {
+  display: none;
+}
+
+@media (min-width: 1024px) {
+  .header {
+    top: 55px;
+  }
+
+  .header__search {
+    width: 61px;
+    height: 61px;
+  }
+
+  .menu {
+    display: none;
+  }
+
+  .nav--desktop {
+    display: block;
+  }
+
+  .nav--desktop .nav__list {
+    flex-direction: row;
+    gap: var(--space-2);
+  }
+
+  .nav__link {
+    padding-inline: var(--space-3);
+    transition: opacity var(--ease);
+  }
+
+  .nav__link:hover {
+    opacity: 0.75;
+  }
+}
+
+@media (min-width: 1024px) and (hover: hover) {
+  .header__search:hover {
+    transform: translateY(-2px);
+  }
+}

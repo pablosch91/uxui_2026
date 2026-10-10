@@ -1,0 +1,98 @@
+.product-card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  padding: var(--space-4);
+  background: var(--color-sand-20);
+  border: 1.5px solid var(--color-sand);
+  border-radius: var(--radius-card);
+  scroll-snap-align: start;
+  transition: box-shadow var(--ease);
+}
+
+.product-card__media {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 334 / 364;
+  border-radius: var(--radius-img);
+}
+
+.product-card__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--ease);
+}
+
+.product-card__fav {
+  position: absolute;
+  top: 4px;
+  right: 4px;
+}
+
+.product-card__fav-label {
+  display: grid;
+  place-items: center;
+  width: var(--tap);
+  height: var(--tap);
+  cursor: pointer;
+  background: url("../../assets/icons/heart.svg") center / 33px no-repeat;
+}
+
+.product-card__fav-input:checked+.product-card__fav-label {
+  background-image: url("../../assets/icons/heart-filled.svg");
+}
+
+.product-card__fav-input:focus-visible+.product-card__fav-label {
+  outline: 2px solid var(--color-white);
+  border-radius: 50%;
+}
+
+.product-card__title {
+  font: 600 var(--fs-card-title)/1.15 var(--font-body);
+}
+
+.product-card__text {
+  margin-top: calc(-1 * var(--space-2));
+  color: var(--color-maroon);
+  font: 400 var(--fs-lg)/1.4 var(--font-body);
+}
+
+.product-card__row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-4);
+  margin-top: auto;
+}
+
+.product-card__price {
+  color: var(--color-maroon);
+  font: 600 var(--fs-lg)/1 var(--font-ui);
+}
+
+.product-card__btn {
+  min-height: var(--tap);
+  padding: 10px 26px;
+  border: 0;
+  border-radius: var(--radius-btn);
+  background: var(--color-maroon);
+  color: var(--color-white);
+  font: 500 var(--fs-sm)/1 var(--font-ui);
+  transition: transform var(--ease), background-color var(--ease);
+}
+
+.product-card__btn:hover {
+  background: var(--color-espresso);
+  transform: translateY(-2px);
+}
+
+@media (hover: hover) {
+  .product-card:hover {
+    box-shadow: var(--shadow-card);
+  }
+
+  .product-card:hover .product-card__img {
+    transform: scale(1.03);
+  }
+}

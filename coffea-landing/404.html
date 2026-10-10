@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600&family=Playfair+Display:wght@500;600;700&family=Poppins:wght@400;500;600&family=Reggae+One&display=swap">
+  <title>Page not found — Coffea</title>
+  <meta name="robots" content="noindex">
+  <link rel="stylesheet" href="/css/main.css">
+  <style>
+    @layer components {
+      .nf {
+        min-height: 70vh;
+        display: grid;
+        place-content: center;
+        justify-items: center;
+        gap: 1.5rem;
+        padding: 8rem 1rem 4rem;
+        background: var(--color-espresso);
+        color: var(--color-white);
+        text-align: center;
+      }
+
+      .nf h1 {
+        font: 700 var(--fs-hero)/1.1 var(--font-display);
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header class="header">
+    <div class="container header__inner">
+      <a class="header__logo" href="/">coffea</a>
+      <nav class="nav nav--desktop" aria-label="Principal">
+        <ul class="nav__list">
+          <li><a class="nav__link" href="#">home</a></li>
+          <li><a class="nav__link" href="#">coffee</a></li>
+          <li><a class="nav__link" href="#">bakery</a></li>
+          <li><a class="nav__link" href="#">shop</a></li>
+          <li><a class="nav__link" href="#">about</a></li>
+          <li><a class="nav__link nav__link--login" href="#">login</a></li>
+        </ul>
+      </nav>
+      <button class="header__search" type="button" aria-label="Buscar">
+        <img src="/assets/icons/search.svg" alt="" width="61" height="61">
+      </button>
+      <details class="menu">
+        <summary class="menu__toggle"><span class="visually-hidden">Menú</span></summary>
+        <nav class="menu__panel" aria-label="Principal móvil">
+          <ul class="nav__list">
+            <li><a class="nav__link" href="#">home</a></li>
+            <li><a class="nav__link" href="#">coffee</a></li>
+            <li><a class="nav__link" href="#">bakery</a></li>
+            <li><a class="nav__link" href="#">shop</a></li>
+            <li><a class="nav__link" href="#">about</a></li>
+            <li><a class="nav__link nav__link--login" href="#">login</a></li>
+          </ul>
+        </nav>
+      </details>
+    </div>
+  </header>
+  <main id="main">
+    <section class="nf">
+      <h1>404</h1>
+      <p>We couldn't find that page.</p>
+      <a class="hero__btn" href="/">Back to home</a>
+    </section>
+  </main>
+  <footer class="footer">
+    <div class="container footer__grid">
+      <p class="footer__brand">Coffea</p>
+      <nav aria-label="PRIVACY">
+        <h3 class="footer__title">PRIVACY</h3>
+        <ul class="footer__list">
+          <li><a class="footer__link" href="#">Privacy policy</a></li>
+          <li><a class="footer__link" href="#">Terms of use</a></li>
+          <li><a class="footer__link" href="#">Cookies</a></li>
+        </ul>
+      </nav>
+      <nav aria-label="SERVICES">
+        <h3 class="footer__title">SERVICES</h3>
+        <ul class="footer__list">
+          <li><a class="footer__link" href="#">Delivery</a></li>
+          <li><a class="footer__link" href="#">Catering</a></li>
+          <li><a class="footer__link" href="#">Gift cards</a></li>
+        </ul>
+      </nav>
+      <nav aria-label="ABOUT US">
+        <h3 class="footer__title">ABOUT US</h3>
+        <ul class="footer__list">
+          <li><a class="footer__link" href="#">Our story</a></li>
+          <li><a class="footer__link" href="#">Team</a></li>
+          <li><a class="footer__link" href="#">Careers</a></li>
+        </ul>
+      </nav>
+      <nav aria-label="INFORMATION">
+        <h3 class="footer__title">INFORMATION</h3>
+        <ul class="footer__list">
+          <li><a class="footer__link" href="#">Plans &amp; pricing</a></li>
+          <li><a class="footer__link" href="#">FAQ</a></li>
+          <li><a class="footer__link" href="#">Contact</a></li>
+        </ul>
+      </nav>
+      <div>
+        <h3 class="footer__title">SOCIAL MEDIA</h3>
+        <ul class="footer__social">
+          <li>
+            <a class="footer__social-link" href="#" aria-label="X / Twitter">
+              <img src="/assets/icons/social-x.svg" alt="" width="24" height="24">
+            </a>
+          </li>
+          <li>
+            <a class="footer__social-link" href="#" aria-label="Instagram">
+              <img src="/assets/icons/social-instagram.svg" alt="" width="24" height="24">
+            </a>
+          </li>
+          <li>
+            <a class="footer__social-link" href="#" aria-label="Facebook">
+              <img src="/assets/icons/social-facebook.svg" alt="" width="24" height="24">
+            </a>
+          </li>
+          <li>
+            <a class="footer__social-link" href="#" aria-label="LinkedIn">
+              <img src="/assets/icons/social-linkedin.svg" alt="" width="24" height="24">
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>

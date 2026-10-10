@@ -1,0 +1,77 @@
+.carousel {
+  position: relative;
+  width: min(100% - 2 * var(--pad), 1476px);
+  margin: var(--space-10) auto 0;
+}
+
+.carousel__track {
+  display: flex;
+  gap: 4px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+  padding-bottom: var(--space-2);
+}
+
+.carousel__track::-webkit-scrollbar {
+  display: none;
+}
+
+.carousel__track>.product-card {
+  flex: 0 0 82%;
+}
+
+.carousel__arrow {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .carousel__track>.product-card {
+    flex-basis: 40%;
+  }
+}
+
+@media (min-width: 1024px) {
+  .carousel {
+    margin-top: 64px;
+  }
+
+  .carousel__track>.product-card {
+    flex-basis: calc((100% - 12px) / 4);
+  }
+
+  .carousel__arrow {
+    position: absolute;
+    top: 50%;
+    z-index: 2;
+    display: block;
+    width: 71px;
+    height: 71px;
+    margin-top: -35px;
+    transition: transform var(--ease);
+  }
+
+  .carousel__arrow img {
+    width: 100%;
+    height: 100%;
+  }
+
+  .carousel__arrow--prev {
+    left: var(--space-2);
+    transform: scaleX(-1);
+  }
+
+  .carousel__arrow--next {
+    right: var(--space-2);
+  }
+}
+
+@media (min-width: 1700px) {
+  .carousel__arrow--prev {
+    left: -80px;
+  }
+
+  .carousel__arrow--next {
+    right: -80px;
+  }
+}

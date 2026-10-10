@@ -1,0 +1,27 @@
+.container {
+  width: min(100% - 2 * var(--pad), var(--container));
+  margin-inline: auto;
+}
+
+.band {
+  background: var(--color-sand);
+}
+
+.section {
+  padding-block: var(--space-10);
+}
+
+@media (min-width: 1024px) {
+  .section {
+    padding-block: var(--space-14);
+  }
+}
+
+.section__title {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: var(--fs-h2);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  text-align: center;
+}

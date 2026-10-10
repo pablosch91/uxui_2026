@@ -1,0 +1,114 @@
+.newsletter {
+  position: relative;
+  overflow: hidden;
+  display: grid;
+  place-items: center;
+  min-height: 320px;
+  padding: var(--space-10) var(--pad);
+  background: var(--color-sand);
+  text-align: center;
+}
+
+.newsletter__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-2);
+  width: min(100%, 36rem);
+}
+
+.newsletter__title {
+  font: 600 var(--fs-h2)/1.2 var(--font-ui);
+}
+
+.newsletter__text {
+  font: 500 var(--fs-base)/1.4 var(--font-ui);
+}
+
+.newsletter__form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  width: 100%;
+  margin-top: var(--space-4);
+}
+
+.newsletter__field {
+  position: relative;
+  flex: 1;
+}
+
+.newsletter__icon {
+  position: absolute;
+  left: var(--space-4);
+  top: 50%;
+  width: 24px;
+  height: 24px;
+  margin-top: -12px;
+  pointer-events: none;
+}
+
+.newsletter__input {
+  width: 100%;
+  min-height: var(--tap);
+  padding: 0 var(--space-4) 0 3.25rem;
+  border: 2px solid transparent;
+  border-radius: var(--radius-pill);
+  background: var(--color-bg);
+  font: 400 var(--fs-base) var(--font-ui);
+}
+
+.newsletter__input:user-invalid {
+  border-color: var(--color-error);
+}
+
+.newsletter__btn {
+  min-height: var(--tap);
+  padding-inline: var(--space-7);
+  border: 0;
+  border-radius: var(--radius-pill);
+  background: var(--color-espresso);
+  color: var(--color-bg);
+  font: 500 var(--fs-base) var(--font-ui);
+  transition: transform var(--ease);
+}
+
+.newsletter__btn:hover {
+  transform: translateY(-2px);
+}
+
+.newsletter__img {
+  display: none;
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: auto;
+  max-width: none;
+  mix-blend-mode: multiply;
+}
+
+@media (min-width: 768px) {
+  .newsletter__form {
+    flex-direction: row;
+    gap: 12px;
+  }
+
+  .newsletter__field {
+    flex: 0 1 364px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .newsletter__img {
+    display: block;
+  }
+
+  .newsletter__img--left {
+    left: 0;
+  }
+
+  .newsletter__img--right {
+    right: 0;
+    transform: scaleX(-1);
+  }
+}
