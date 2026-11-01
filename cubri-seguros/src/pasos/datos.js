@@ -30,7 +30,7 @@ export const datos = pasoCheckout({
   acciones: `
     <button type="button" data-ir="2" class="btn hidden lg:inline-flex" data-variant="outline">Volver</button>
     <div class="flex flex-col items-center gap-2 lg:flex-row lg:gap-4">
-      <p data-ayuda-boton class="order-2 text-[11px] text-slate-500 lg:order-1">El botón se habilita cuando el formulario es válido</p>
-      <button type="button" data-ir="4" class="btn order-1 w-full lg:order-2 lg:w-auto" disabled>Continuar al pago</button>
+      <p data-ayuda-boton class="order-2 text-center text-[11px] text-slate-500 empty:hidden lg:order-1 lg:text-right"></p>
+      <button type="button" data-ir="4" data-continuar class="btn order-1 w-full lg:order-2 lg:w-auto" disabled>Continuar al pago</button>
     </div>`,
 });

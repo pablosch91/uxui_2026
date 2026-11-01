@@ -19,14 +19,14 @@ export const catalogo = `
 <section data-paso="0" class="flex min-h-[calc(100vh-57px)] flex-col lg:min-h-0">
   <div class="flex-1 px-4 py-6 lg:grid lg:grid-cols-2 lg:items-center lg:gap-12 lg:px-6 lg:py-16">
     <div>
-      <span class="badge mb-3 hidden lg:inline-flex" data-variant="secondary">Primer mes con 20% OFF</span>
+      <span class="badge mb-3 hidden bg-emerald-50! text-emerald-600! lg:inline-flex" data-variant="secondary">Primer mes con 20% OFF</span>
       <h1 class="text-2xl font-extrabold leading-tight lg:text-5xl">Protegé lo que más usás en menos de 3 minutos</h1>
       <p class="mt-2 text-[15px] text-slate-500">Elegí qué querés asegurar, cotizá al instante y contratá 100% online.<span class="hidden lg:inline"> Sin papeles ni llamadas.</span></p>
       <button type="button" data-ir="1" class="btn mt-6 hidden lg:inline-flex">Cotizar ahora</button>
     </div>
     <div class="mt-5 grid grid-cols-2 gap-3 lg:mt-0">${productos.map(tarjeta).join('')}</div>
     <div class="card mt-3 flex items-center gap-3 p-3 text-xs lg:hidden">
-      <span class="badge" data-variant="secondary">NUEVO</span>
+      <span class="badge bg-emerald-50! text-emerald-600!" data-variant="secondary">NUEVO</span>
       <span class="text-slate-500">Primer mes con 20% OFF en todos los planes</span>
     </div>
   </div>

@@ -8,6 +8,7 @@ export let planes = [];
 export function setPlanes(lista) { planes = lista; }
 
 export function render() {
+  window.scrollTo(0, 0);
   document.querySelectorAll('[data-paso]').forEach((s) => {
     s.hidden = Number(s.dataset.paso) !== solicitud.paso;
   });
@@ -35,7 +36,7 @@ function renderPlanes() {
 }
 
 // Se genera una sola vez desde el estado (mobile y desktop comparten esta función).
-function renderResumen() {
+export function renderResumen() {
   const { equipo, plan, titular } = solicitud;
   const p = planes.find((x) => x.id === plan);
   const cuota = p ? calcularCuota(equipo.valor, p.tasaAnual, equipo.antiguedad) : 0;

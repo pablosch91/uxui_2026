@@ -39,5 +39,5 @@ export const error = pantalla({
     Tarjeta de prueba que fuerza el error: 4000 0000 0000 0002</div>`,
   botones: `
     <button type="button" data-ir="4" class="btn w-full lg:flex-1">Reintentar pago</button>
-    <button type="button" data-ir="4" class="btn w-full lg:flex-1" data-variant="outline">Cambiar medio de pago</button>`,
+    <button type="button" data-ir="4" data-cambiar-medio class="btn w-full lg:flex-1" data-variant="outline">Cambiar medio de pago</button>`,
 });

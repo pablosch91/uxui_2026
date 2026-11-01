@@ -1,0 +1,47 @@
+# OPCIONAL (bonus: deploy automático con GitHub Actions).
+# Mover este archivo a la RAÍZ DEL REPO:  .github/workflows/deploy-tp5.yml
+# (no dentro de cubri-seguros/, si no GitHub no lo ejecuta).
+# Luego en GitHub: Settings > Pages > Source: "GitHub Actions".
+name: Deploy TP5 a GitHub Pages
+
+on:
+  push:
+    branches: [main]
+    paths: ['cubri-seguros/**']
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: cubri-seguros
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - run: npm install
+      - run: npm run build
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: cubri-seguros/dist
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

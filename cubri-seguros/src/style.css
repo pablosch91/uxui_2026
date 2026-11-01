@@ -16,3 +16,5 @@ body { background: var(--bg); color: #0F172A; }
 .field p { font-size: 12px; font-weight: 400; color: #64748B; }
 .field input, .field select { width: 100%; }
 .field[data-invalid] p { color: #DC2626; }
+.field[data-invalid] :is(input, select) { border-color: #DC2626; background: #FEF2F2; }
+.field[data-invalid] p[data-ayuda] { display: none; }

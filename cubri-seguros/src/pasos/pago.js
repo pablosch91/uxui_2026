@@ -16,18 +16,15 @@ const campo = (id, etiqueta, extra = '') => `
   </div>`;
 
 const contenido = `
-  <form id="form-pago" novalidate class="grid gap-4 lg:grid-cols-2">
-    <div class="grid gap-2 lg:col-span-2 lg:grid-cols-2" role="radiogroup" aria-label="Medio de pago">
+  <form id="form-pago" novalidate class="grid grid-cols-2 gap-4">
+    <div class="col-span-2 grid gap-2 lg:grid-cols-2" role="radiogroup" aria-label="Medio de pago">
       ${medio('credito', 'Tarjeta de crédito', true)}${medio('debito', 'Tarjeta de débito')}
     </div>
-    ${campo('tarjeta', 'Número de tarjeta', 'inputmode="numeric" placeholder="4111 1111 1111 1111"')}
-    <div class="hidden lg:block">${campo('titular-tarjeta', 'Titular', 'placeholder="JUAN PEREZ"')}</div>
-    <div class="grid grid-cols-2 gap-4 lg:contents">
-      ${campo('vencimiento', 'Vencimiento', 'inputmode="numeric" placeholder="MM/AA"')}
-      ${campo('cvv', 'CVV', 'inputmode="numeric" maxlength="3" placeholder="123"')}
-    </div>
-    <div class="lg:hidden">${campo('titular-tarjeta-m', 'Titular', 'placeholder="JUAN PEREZ"')}</div>
-    <div class="alert rounded-lg bg-amber-50 p-3 text-xs text-amber-800 lg:col-span-2" role="note">
+    <div class="order-1 col-span-2 lg:col-span-1">${campo('tarjeta', 'Número de tarjeta', 'inputmode="numeric" placeholder="4111 1111 1111 1111"')}</div>
+    <div class="order-2 lg:order-3">${campo('vencimiento', 'Vencimiento', 'inputmode="numeric" placeholder="MM/AA"')}</div>
+    <div class="order-3 lg:order-4">${campo('cvv', 'CVV', 'inputmode="numeric" maxlength="3" placeholder="123"')}</div>
+    <div class="order-4 col-span-2 lg:order-2 lg:col-span-1">${campo('titular-tarjeta', 'Titular', 'placeholder="JUAN PEREZ"')}</div>
+    <div class="alert order-5 col-span-2 rounded-lg bg-amber-50 p-3 text-xs text-amber-800" role="note">
       Simulación: no se procesan pagos reales. Usá la tarjeta de prueba
       <span class="font-semibold">4111 1111 1111 1111</span> (aprobada) o
       <span class="font-semibold">4000 0000 0000 0002</span> (rechazada).

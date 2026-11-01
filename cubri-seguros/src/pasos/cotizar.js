@@ -26,9 +26,9 @@ const contenido = `
     <div role="group" class="field">
       <label for="valor">Valor del equipo</label>
       <input id="valor" name="valor" type="text" inputmode="numeric" placeholder="$ 600.000" autocomplete="off">
-      <p>Entre $100.000 y $2.500.000</p>
+      <p data-ayuda>Entre $100.000 y $2.500.000</p>
     </div>
-    <fieldset class="grid gap-2">
+    <fieldset id="antiguedad" class="grid gap-2">
       <legend class="mb-1 text-[13px] font-semibold">Antigüedad</legend>
       <div class="flex flex-wrap gap-2">
         ${chip('menos1', 'Menos de 1 año')}${chip('1a2', '1 a 2 años')}${chip('mas2', '+2 años')}
@@ -43,5 +43,6 @@ export const cotizar = pasoCheckout({
   resumenEnMobile: false,
   volverA: 0,
   contenido,
-  acciones: `<span class="hidden lg:block"></span><button type="button" data-ir="2" class="btn w-full lg:w-auto" disabled>Ver planes</button>`,
+  acciones: `<p data-ayuda-boton class="text-center text-[11px] text-slate-500 empty:hidden lg:text-left"></p>
+    <button type="button" data-ir="2" data-continuar class="btn w-full lg:w-auto" disabled>Ver planes</button>`,
 });
