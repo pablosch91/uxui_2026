@@ -2,7 +2,7 @@
 
 TP5 de Diseño UX/UI (Licenciatura en Sistemas de Información, FCyT). Front-end de un checkout de **Seguro de Celular** en 4 pasos (cotizar, elegir plan, datos personales y pago), con pantallas de éxito y de error de pago. Sin backend ni pagos reales.
 
-- **Sitio publicado:** _(pegar acá la URL)_
+- **Sitio publicado:** https://cubri-seguros-pablo.netlify.app/
 - **Diseño en Figma:** https://www.figma.com/design/vJrfOUfiOI7OSeTtRfCloh
 
 ## Stack
