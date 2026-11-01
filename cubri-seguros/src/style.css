@@ -1,0 +1,18 @@
+@import "tailwindcss";
+@import "basecoat-css";
+
+:root {
+  --primary: #4F46E5;
+  --primary-foreground: #FFFFFF;
+  --radius: 0.75rem;
+  --bg: #F5F7FB;
+  font-family: 'Inter', system-ui, sans-serif;
+}
+
+body { background: var(--bg); color: #0F172A; }
+
+/* Escala tipográfica del Figma: label 13/600 · help 12/400 */
+.field label:not(.check) { font-size: 13px; font-weight: 600; }
+.field p { font-size: 12px; font-weight: 400; color: #64748B; }
+.field input, .field select { width: 100%; }
+.field[data-invalid] p { color: #DC2626; }
